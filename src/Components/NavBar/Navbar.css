@@ -1,0 +1,13 @@
+.nav-toggle-btn {
+  border: solid 1px rgb(67, 67, 67);
+  outline: none !important;
+  padding: 10px 30px;
+  font-size: 1.8rem;
+  transition: all 0.3s ease-in-out;
+}
+.nav-toggle-btn:hover {
+  border: solid 1px rgb(28, 28, 28);
+  outline: none !important;
+  color: #fff;
+  background-color: #333;
+}
