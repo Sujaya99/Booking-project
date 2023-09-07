@@ -1,13 +1,20 @@
 .nav-toggle-btn {
-  border: solid 1px rgb(67, 67, 67);
+  border: none !important;
   outline: none !important;
   padding: 10px 30px;
   font-size: 1.8rem;
   transition: all 0.3s ease-in-out;
 }
 .nav-toggle-btn:hover {
-  border: solid 1px rgb(28, 28, 28);
+  border: none !important;
   outline: none !important;
-  color: #fff;
-  background-color: #333;
+  /* color: #fff; */
+  /* background-color: #333; */
+}
+
+.dropdown-link {
+  outline: none !important;
+}
+.dropdown-link:focus {
+  box-shadow: none;
 }

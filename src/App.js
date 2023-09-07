@@ -15,26 +15,31 @@ import Navbar from "./Components/NavBar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import BookTicket from "./Components/Forms/BookingForms/BookTicket";
 import TitleAddButton from "./Components/TitleAddButton/TitleAddButton";
+import SideMenu from "./Components/SideMenu";
 function App() {
   return (
-    <div className="App">
+    <div className="App ">
       {/* NAVBAR */}
       <Navbar />
-
-      {/* CONTENTS */}
-      <div className="page-content">
-        <Routes>
-          <Route path="/fleet" element={<FleetManagement />} />
-          <Route path="/route" element={<RouteManagement />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/service" element={<Services />} />
-          <Route path="/print-trip" element={<PrintTripSheet />} />
-          <Route path="/cancel-refund" element={<CancellationAndRefund />} />
-          <Route path="/booking" element={<Booking />} />
-          <Route path="/" element={<Overview />} />
-          <Route path="/*" element={<ErrorPage />} />
-          <Route path="/bookticket" element={<TitleAddButton />} />
-        </Routes>
+      <div className="grid-container d-flex">
+        <div className="grid-item  float-left column side">
+          <SideMenu />
+        </div>
+        {/* CONTENTS */}
+        <div className="page-content grid-item">
+          <Routes>
+            <Route path="/fleet" element={<FleetManagement />} />
+            <Route path="/route" element={<RouteManagement />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/service" element={<Services />} />
+            <Route path="/print-trip" element={<PrintTripSheet />} />
+            <Route path="/cancel-refund" element={<CancellationAndRefund />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/" element={<Overview />} />
+            <Route path="/*" element={<ErrorPage />} />
+            <Route path="/bookticket" element={<TitleAddButton />} />
+          </Routes>
+        </div>
       </div>
 
       {/* FOOTER */}

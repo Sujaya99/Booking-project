@@ -1,3 +1,13 @@
+.rectangle231 {
+  width: 139px;
+  height: 37px;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0em;
+  border-radius: 10px;
+  border: 1px solid #000000;
+}
 .App {
   margin: 0;
   padding: 0;
@@ -10,7 +20,7 @@
 .page-content {
   width: 100%;
   margin: 0;
-  padding: 0 10%;
+  padding: 0%;
   min-height: 100vh;
 }
 
@@ -50,12 +60,557 @@
 .select-input:focus {
   box-shadow: none;
 }
+/* navbar common style */
 .navbar {
   width: 100%;
   height: 92.61328125px;
   top: 1px;
+  background: linear-gradient(0deg, #4986c7, #509ce5, #5ab0ff, #5ab0ff);
+}
+/* search */
+.input-container {
+  position: relative;
+}
+
+.input-container > .search {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  color: #c5c5c5;
+}
+
+.input-container > .input-search {
+  padding-left: 40px;
+  width: 459px;
+  height: 36px;
+  max-width: 459px;
+  color: #c5c5c5;
+}
+.bell {
+  position: relative;
+}
+.dot {
+  position: absolute;
+  float: left;
+  right: 376px;
+  top: 28px;
+}
+/* text after logo */
+.booking {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+}
+.selectOperator {
+  top: 28px !important;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 5px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-left: 18px;
+  margin-bottom: 0 !important;
+}
+.operatorName {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.welcome {
+  font-family: Montserrat;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 13px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+.username {
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+/* overview */
+.place {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.infoCircle {
+  color: #0084e4;
+}
+.refresh {
+  float: right;
+  color: #464646;
+  background-color: white;
+}
+.table {
+  /* width: 100%; */
+  margin-top: 27px;
+}
+.placeMaster {
+  border-bottom: 2px solid #0084e4;
+}
+.lines {
+  float: right;
+}
+.form-check-input {
+  width: 24px;
+  height: 24px;
+  outline: 1px solid #373737;
+}
+.view {
+  text-decoration: none;
+}
+.table-stripe > tbody > tr:nth-child(even) > td {
+  border-bottom: 1px solid #eaeaea;
+  background: #f6f6f6;
+}
+tr {
+  height: 48px;
+}
+thead {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+}
+th {
+  background: #e7effb !important;
+}
+td {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+  vertical-align: middle;
+}
+.link-text:hover {
+  background-color: #0084e4;
+  color: #fff;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar {
+  width: 174px !important;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.grid-container {
+  background: #eff2f7;
+  display: flex;
+}
+.column {
+  background-color: #fff;
 }
 .sidebar {
-  width: 147px;
   height: 100vh;
+}
+.page-link:focus {
+  background-color: #0084e4;
+  color: white;
+}
+.box {
+  border-radius: 9px;
+  font-family: Montserrat;
+  font-size: 14px;
+  width: 100%;
+}
+
+.switches-container {
+  width: 181px;
+  height: 37px;
+  position: relative;
+  display: flex;
+  padding: 0;
+  background: white;
+  border-radius: 190px;
+  outline: 1px solid #0084e4;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-align: center;
+}
+
+/* input (radio) for toggling. hidden - use labels for clicking on */
+.switches-container input {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+
+/* labels for the input (radio) boxes - something to click on */
+.switches-container label {
+  width: 101px;
+  height: 37px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  color: #0084e4;
+}
+
+.switch-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  padding: 0px;
+  z-index: 3;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* switch box highlighter */
+.switch {
+  border-radius: 190px;
+  background: #0084e4;
+  height: 100%;
+}
+
+.switch div {
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  display: block;
+  color: white;
+  transition: opacity 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0.125s;
+  will-change: opacity;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* slide the switch box from right to left */
+.switches-container input:nth-of-type(1):checked ~ .switch-wrapper {
+  transform: translateX(0%);
+}
+
+/* slide the switch box from left to right */
+.switches-container input:nth-of-type(2):checked ~ .switch-wrapper {
+  transform: translateX(100%);
+}
+
+/* toggle the switch box labels - first checkbox:checked - show first switch div */
+.switches-container
+  input:nth-of-type(1):checked
+  ~ .switch-wrapper
+  .switch
+  div:nth-of-type(1) {
+  opacity: 1;
+}
+
+/* toggle the switch box labels - second checkbox:checked - show second switch div */
+.switches-container
+  input:nth-of-type(2):checked
+  ~ .switch-wrapper
+  .switch
+  div:nth-of-type(2) {
+  opacity: 1;
+}
+.delete {
+  width: 139px;
+  height: 37px;
+  top: 1342px;
+  left: 252px;
+  border-radius: 10px;
+  border: 1px solid red;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0em;
+  color: red;
+}
+.delete:hover {
+  border: 1px solid red;
+}
+/* Style for the overall container */
+.listItem {
+  background-color: #fff;
+}
+.listOption {
+  list-style-type: none;
+}
+.listOption:hover {
+  background-color: #0084e4;
+}
+.dropdown1 {
+  width: 554px;
+  height: 41px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px;
+}
+.selected-option {
+  background-color: #c6dbfa;
+  width: 199px;
+  height: 42px;
+  border-radius: 31px;
+  border: 1px solid #c6dbfa;
+  background: #e7effb;
+  justify-content: center;
+  text-align: center;
+  line-height: -20px;
+}
+.selected-options-row {
+  padding-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.calendar-icon {
+  background: #0066ff;
+  padding: 8px 9px;
+  display: inline-block;
+  margin-right: 0 !important;
+  box-sizing: border-box;
+  position: absolute;
+  right: 0px;
+  bottom: 0%;
+  top: 0%;
+  cursor: pointer;
+}
+.date-picker-input-field {
+  padding-right: 30px;
+  width: 363px;
+  height: 42px;
+  border-radius: 5px !important;
+  border: 1px solid #dddd;
+  color: #000000;
+  position: relative;
+}
+.date-picker-input-field:focus {
+  outline: none;
+}
+.date-picker {
+  display: inline-block;
+}
+.custom-calendar .react-datepicker-popper {
+  width: 346px !important;
+  height: 342px !important;
+}
+
+/* Style the date picker calendar */
+.custom-calendar {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  display: grid;
+  font-size: 14px;
+  grid-template-columns: (7, calc(100% / 7));
+  position: absolute;
+  z-index: 2;
+}
+
+/* Style the header of the calendar */
+.custom-calendar .react-datepicker__header {
+  background-color: white;
+  color: white;
+  border-bottom: 0;
+}
+
+/* Style the day names in the calendar */
+.custom-calendar .react-datepicker__day-name {
+  padding-top: 15px;
+  color: #000000;
+  font-weight: 700;
+}
+.custom-calendar .react-datepicker__day--outside-month {
+  color: #ccc !important;
+}
+/* Style the month and year in the header */
+.custom-calendar .react-datepicker__current-month-year {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  position: relative;
+}
+
+/* Add an underline after the month name */
+.custom-calendar .react-datepicker__current-month-year::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  background-color: #000000;
+  margin: 0 auto;
+  margin-top: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+}
+
+/* Style the days in the calendar */
+.custom-calendar .react-datepicker__day {
+  color: #333;
+}
+
+/* Style the selected date in the calendar */
+.custom-calendar .react-datepicker__day--selected {
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.custom-calendar .react-datepicker__day--today {
+  font-weight: bold;
+}
+.date-picker-input {
+  display: inline-block;
+}
+
+.date-picker-input-field::placeholder {
+  color: #000000;
+}
+
+.lastRow {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  height: 500px;
+}
+.bottom-text {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+}
+.Company_name {
+  width: 133px;
+  height: 26px;
+}
+
+.arc {
+  flex-shrink: 0;
+  bottom: 0% !important;
+  right: 0% !important;
+  position: absolute;
+}
+.arcImage {
+  bottom: 0 !important;
+  right: 0 !important;
+  position: relative;
+  z-index: 1;
+}
+.navbar-toggler {
+  display: none;
+}
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: block;
+  }
+  .side {
+    display: none;
+  }
+  .select-layout {
+    display: none;
+  }
+  .input-container > .input-search {
+    width: 100px;
+    height: 36px;
+    margin: 0 !important;
+    padding-left: 20px;
+  }
+  .navbar {
+    width: 100%;
+  }
+  .booking {
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+  }
+  .operatorName {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+  }
+  .bell {
+    position: relative;
+    width: 18px;
+  }
+  .dot {
+    position: absolute;
+    float: left;
+    right: 322px;
+    top: 30px;
+    width: 12px;
+  }
+  .box {
+    width: 550px;
+  }
+  .rectangle231 {
+    width: 80px;
+    height: 37px;
+  }
+  .switches-container {
+    width: 120px;
+    height: 27px;
+    border-radius: 20px;
+    line-height: 25px;
+  }
+  .switches-container label {
+    width: 81px;
+    height: 27px;
+  }
+  .delete {
+    width: 80px;
+    height: 37px;
+    line-height: 15px;
+  }
+  .delete:hover {
+    border: 1px solid red;
+  }
+  .dropdown1 {
+    width: 250px;
+    height: 32px;
+    border-radius: 5px;
+  }
+  .selected-option {
+    background-color: #c6dbfa;
+    width: 129px;
+    height: 42px;
+    border-radius: 31px;
+    border: 1px;
+    text-align: center;
+  }
+
+  .sidebar {
+    width: 154px !important;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  table {
+    overflow-x: auto;
+  }
 }
