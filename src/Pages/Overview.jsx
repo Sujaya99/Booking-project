@@ -34,6 +34,39 @@ function Overview() {
         status: "active",
         view: "view",
       },
+      {
+        id: 2,
+        district: "Ernakulam",
+        districtCode: "EKM",
+        stopPlaceName: "Vytila",
+        stopPlaceCode: "VTLA",
+        stopType: "Hub Station",
+        googleMap: "Google map",
+        status: "active",
+        view: "view",
+      },
+      {
+        id: 3,
+        district: "Ernakulam",
+        districtCode: "EKM",
+        stopPlaceName: "Vytila",
+        stopPlaceCode: "VTLA",
+        stopType: "Hub Station",
+        googleMap: "Google map",
+        status: "active",
+        view: "view",
+      },
+      {
+        id: 4,
+        district: "Ernakulam",
+        districtCode: "EKM",
+        stopPlaceName: "Vytila",
+        stopPlaceCode: "VTLA",
+        stopType: "Hub Station",
+        googleMap: "Google map",
+        status: "active",
+        view: "view",
+      },
 
       // Add more data rows here
     ],
@@ -48,6 +81,7 @@ function Overview() {
             type="checkbox"
             checked={checkboxes.every((val) => val)}
             onChange={toggleAllCheckboxes}
+            className="form-check-input"
           />
         ),
         accessor: "checkbox", // This accessor is arbitrary and won't match your data
@@ -56,13 +90,14 @@ function Overview() {
             type="checkbox"
             checked={checkboxes[row.index]}
             onChange={() => toggleCheckbox(row.index)}
+            className="form-check-input"
           />
         ),
       },
       {
         Header: () => (
           <>
-            <FaSort column="district" />
+            <FaSort column="district" className="sortIcon pe-1" />
             District
             <img src={twoLine} alt="lines" className="lines ps-2" />
           </>
@@ -73,7 +108,7 @@ function Overview() {
       {
         Header: () => (
           <>
-            <FaSort column="District Code" />
+            <FaSort column="District Code" className="sortIcon pe-1" />
             District Code
             <img src={twoLine} alt="lines" className="lines ps-2" />
           </>
@@ -83,7 +118,7 @@ function Overview() {
       {
         Header: () => (
           <>
-            <FaSort column="Stop Place Name" />
+            <FaSort column="Stop Place Name" className="sortIcon pe-1" />
             Stop Place Name
             <img src={twoLine} alt="lines" className="lines ps-2" />
           </>
@@ -93,7 +128,7 @@ function Overview() {
       {
         Header: () => (
           <>
-            <FaSort column="Stop Place Code" />
+            <FaSort column="Stop Place Code" className="sortIcon pe-1" />
             Stop Place Code
             <img src={twoLine} alt="lines" className="lines ps-2" />
           </>
@@ -103,7 +138,7 @@ function Overview() {
       {
         Header: () => (
           <>
-            <FaSort column="Stop Type" />
+            <FaSort column="Stop Type" className="sortIcon pe-1" />
             Stop Type
             <img src={twoLine} alt="lines" className="lines ps-2" />
           </>
@@ -113,7 +148,7 @@ function Overview() {
       {
         Header: () => (
           <>
-            <FaSort column="Google Map" />
+            <FaSort column="Google Map" className="sortIcon pe-1" />
             Google Map
             <img src={twoLine} alt="lines" className="lines ps-2" />
           </>
@@ -123,7 +158,7 @@ function Overview() {
       {
         Header: () => (
           <>
-            <FaSort column="Status" />
+            <FaSort column="Status" className="sortIcon pe-1" />
             Status
             <img src={twoLine} alt="lines" className="lines ps-2" />
           </>
@@ -133,9 +168,8 @@ function Overview() {
       {
         Header: () => (
           <>
-            <FaSort column="View" />
+            <FaSort column="View" className="sortIcon pe-1" />
             View
-            <img src={twoLine} alt="lines" className="lines ps-2" />
           </>
         ),
         accessor: "view",
@@ -202,7 +236,9 @@ function Overview() {
           Place Master <BsInfoCircle className="infoCircle" />
           <GrRefresh className="refresh" />
         </div>
-        <table {...getTableProps()} className="table">
+        <table
+          {...getTableProps()}
+          className="table table-stripe flex-shrink-0">
           <thead>
             {headerGroups.map((headerGroup) => (
               <tr {...headerGroup.getHeaderGroupProps()} className="thead">
@@ -220,7 +256,7 @@ function Overview() {
               return (
                 <tr {...row.getRowProps()}>
                   {row.cells.map((cell) => (
-                    <td {...cell.getCellProps()} className="td ">
+                    <td {...cell.getCellProps()} className="td ps-3">
                       {cell.render("Cell")}
                     </td>
                   ))}
@@ -746,7 +782,7 @@ function Overview() {
               </div>
             </div>
           </div>
-          <div className="col col-5">
+          {/* <div className="col col-5">
             <label className="destination pb-2">Date Selection</label>
             <div className="date-picker">
               <DatePicker
@@ -768,7 +804,7 @@ function Overview() {
                 }
               />
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="p-0 m-0">
           <div className="arc">
